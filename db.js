@@ -1,5 +1,5 @@
 // const express=require("express")
 const moongoose=require("mongoose")
-moongoose.connect("mongodb+srv://mylogin00000:KItAtvl3i7iB3snp@ravi.rgqha.mongodb.net/furniflex")
+moongoose.connect("mongodb+srv://mylogin00000:KItAtvl3i7iB3snp@ravi.rgqha.mongodb.net/furniflex?retryWrites=true&w=majority")
 .then(()=>console.log("db connected"))
 .catch((err)=>console.log(err))
