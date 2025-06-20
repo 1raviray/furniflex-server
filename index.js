@@ -4,6 +4,8 @@ const app = express()
 const cors=require("cors")
 app.use(express.json())
 app.use(cors())
+const PORT = process.env.PORT || 10000;
+
 
 const registerRouter=require("./Routers/register")
 const itemRouter=require("./Routers/items")
@@ -20,4 +22,4 @@ app.use("/Reviews",reviewRouter)
 app.use("/cart",cartOrder)
 
 
-app.listen(3010,()=>console.log("API started"))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
